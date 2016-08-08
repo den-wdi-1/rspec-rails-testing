@@ -113,7 +113,6 @@ end
 
   This creates a `spec` directory. It also adds `spec/spec_helper.rb` and `.rspec` files that are used for configuration. See those files for more information.
 
-1. Configure your specs by going into the `.rspec` file and removing the line that says `--warnings` if there is one.  Consider adding `--format documentation`
 
 1. If you created models before adding rspec-rails, create a spec file for each of your models. (This is only necessary if you had a model created before you installed rspec-rails.)
 
@@ -182,6 +181,8 @@ A test should consist of:
 
 * Use `subject` to define the item being tested.
 * Use `let` to set variables for a test.  
+  * `let` will be run once the variable is called
+  * `let!` will be run at the start of the test
   * These are reset when each test starts!
 * Use `before` to set more complex pre-test steps.
   * before blocks can use variables defined in `let`
@@ -437,7 +438,7 @@ Intermittent test failures are the bane of many a developer's life.  It's import
 
 ## Independent Practice 
 
-Fork and clone the <a href="https://github.com/SF-WDI-LABS/rspec_testing_inventory" target="_blank">rspec testing app</a>. Follow the instructions there.
+Fork and clone the <a href="https://github.com/den-wdi-1/rspec_testing_inventory" target="_blank">rspec testing app</a>. Follow the instructions there.
 
 
 ## Closing Thoughts
